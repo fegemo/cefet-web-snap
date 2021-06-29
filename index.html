@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Marque fotos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&text=PhotoSnap&family=Raleway&display=swap">
+    <link rel="stylesheet" href="style/basico.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/foto-anotada.css">
+    <link rel="stylesheet" href="style/controles.css">
+    <link rel="shortcut icon" href="img/camera.png">
+  </head>
+  <body>
+    <header>
+      <img src="img/camera-big.svg" alt="Ícone de uma câmera">
+      <h1>PhotoSnap</h1>
+    </header>
+    <main>
+      <p>Veja as marcações que foram feitas na foto.</p>
+      <div class="linha">
+        <div class="foto-anotada">
+          <img src="img/pichu-grookey.webp" draggable="false">
+
+          <!-- Estas são as marcações na foto que fazem mostrar um balãozinho -->
+          <div class="marcacao selecionada"
+            data-titulo="Pichu"
+            data-conteudo="Este é o pokémon que solta choque do trovão!!"
+            data-cor="#9e7000"
+            style="width: 20px; height: 20px; top: 10px; left: 10px;"></div>
+
+          <div class="marcacao"
+            data-titulo="Grookey"
+            data-conteudo="Um makakito verde, primo do Bulbassauro"
+            data-cor="#025c02"
+            style="width: 20px; height: 20px; top: 10px; left: 40px;"></div>
+
+        </div>
+
+        <!-- Este é o "balãozinho" -->
+        <div id="balaozinho"></div>
+
+        <!-- Seção de controles das marcações e foto -->
+        <section class="controles">
+          <fieldset>
+            <legend>Das marcações</legend>
+
+            <div class="conjunto-controles rotulos-proximos">
+              <label>ocultar marcações: <input type="checkbox" id="visibilidade-das-marcacoes" value="marcacoes-ocultas"></label>
+            </div>
+
+            <div class="conjunto-controles">
+              <label>x: <input type="number" value="300" id="x-da-marcacao"></label>
+              <label>y: <input type="number" value="50" id="y-da-marcacao"></label>
+              <label>largura: <input type="number" value="120" id="largura-da-marcacao"></label>
+              <label>altura: <input type="number" value="135" id="altura-da-marcacao"></label>
+            </div>
+
+            <div class="conjunto-controles">
+              <label for="titulo-da-marcacao">título:</label>
+              <input type="text" id="titulo-da-marcacao">
+              <label for="conteudo-da-marcacao">conteúdo:</label>
+              <textarea id="conteudo-da-marcacao" rows="2"></textarea>
+              <label>cor do texto: <input type="color" id="cor-da-marcacao"></label>
+            </div>
+
+            <div class="conjunto-controles">
+              <div class="rotulos-proximos">
+                formato da marcação:
+                <label>
+                  <input type="radio" name="formato-da-marcacao" value="formato-retangular" checked> retangular
+                </label>
+                <label>
+                  <input type="radio" name="formato-da-marcacao" value="formato-oval"> oval
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Da foto</legend>
+            <div class="conjunto-controles">
+              <label>
+                filtro:
+                <select id="filtro-da-foto">
+                  <option value="none">nenhum</option>
+                  <option value="sepia(1)">tom de cor sépia</option>
+                  <option value="invert(1)">cores invertidas</option>
+                  <option value="grayscale(1)">escala de cinza</option>
+                  <option value="contrast(8)">super contraste</option>
+                  <option value="blur(3px)">borragem</option>
+                  <option value="hue-rotate(300deg)">rotação de tonalidade</option>
+                </select>
+              </label>
+              
+              <label for="file">selecione a sua própria imagem:</label>
+              <input type="file" id="imagem">
+            </div>
+          </fieldset>
+        </section>
+      </div>
+    </main>
+    <script src="script/balaozinho.js"></script>
+    <script src="script/controles-marcacao.js"></script>
+    <script src="script/controles-foto-anotada.js"></script>
+  </body>
+</html>

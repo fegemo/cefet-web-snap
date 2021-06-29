@@ -1,0 +1,15 @@
+body {
+  font-family: Raleway, sans-serif;
+  background-image: repeating-linear-gradient(-45deg, #f9f9f9, #f9f9f9 25px, transparent 25px, transparent 45px);
+}
+
+header {
+  background-image: repeating-linear-gradient(-45deg, #f9f9f905 5px, #f9f9f905 30px, transparent 30px, transparent 50px),
+                    linear-gradient(to right, #ff5656, #f17dbc, #7878f2);
+  box-shadow: 0 2px 8px silver;
+  color: white;
+}
+
+h1 {
+  font-family: "Cedarville Cursive", cursive;
+}

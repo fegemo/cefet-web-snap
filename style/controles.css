@@ -1,0 +1,77 @@
+.controles {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff8;
+  --border-color: silver;
+  --control-color: #333;
+  --input-padding: 0.3em;
+  --text-size: 0.8em;
+  --round-corners: 4px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  color: var(--control-color);
+  padding: var(--input-padding);
+  font-size: var(--text-size);
+  border-radius: var(--round-corners);
+  border-color: var(--border-color);
+  border-width: 1px;
+  border-style: solid;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+input[type="number"] {
+  width: 5em;
+  margin-left: 1em;
+}
+
+input[type="file"] {
+  max-width: 235px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25em;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+ 
+.conjunto-controles {
+  margin-bottom: 1em;
+  border-width: 1px 1px 1px 4px;
+  border-style: solid;
+  border-color: var(--border-color);
+  box-shadow: 2px 2px 2px #0001;
+  padding: 1em;
+}
+
+fieldset {
+  border-style: solid none none none;
+  border-color: silver;
+  border-width: 1px;
+  padding: 1em 0;
+}
+
+legend {
+  margin: 0 auto;
+  font-size: 0.75em;
+  background-image: linear-gradient(to left bottom, #ebeb00, #e9ff78);
+}
+
+label.rotulos-proximos,
+.rotulos-proximos label {
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+

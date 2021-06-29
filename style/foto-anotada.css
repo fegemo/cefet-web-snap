@@ -1,0 +1,56 @@
+.foto-anotada {
+  position: relative;
+}
+
+.marcacao,
+#balaozinho {
+  position: absolute;
+}
+
+.foto-anotada img {
+  box-shadow: 0px 4px 4px rgba(0,0,0,.2);
+  border: 1px solid #666;
+  max-width: 100%;
+}
+
+
+.marcacao {
+  border: 1px solid black;
+  box-shadow: 0 0 0 1px white;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 200ms ease-out;
+  cursor: help;
+}
+
+.marcacao.selecionada {
+  border-color: yellow;
+  box-shadow: 0 0 0 1px darkgoldenrod;
+}
+
+.marcacao.formato-oval {
+  border-radius: 50%;
+}
+
+.marcacao.formato-retangular {
+  border-radius: 0;
+}
+
+.marcacoes-ocultas .marcacao {
+  /* --- Exercício 0 --- */
+}
+
+
+#balaozinho {
+  border: 1px solid silver;
+  background-color: rgba(255, 255, 255, .9);
+  font-size: 10px;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, .3);
+  pointer-events: none;
+}
+
+#balaozinho:empty {
+  display: none;
+}
+
